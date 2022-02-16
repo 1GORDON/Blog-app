@@ -1,2 +1,24 @@
-# Blog-app
-In this project, you will create all controllers and views for your Blog app. As you won't be processing any data yet, you will add simple placeholders for your views with plain HTML.
+# README
+
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
