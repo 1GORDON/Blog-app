@@ -40,7 +40,7 @@ git clone https://github.com/1GORDON/Blog-app.git
 - Go to the repository folder in your command prompt.
 
 ```
-cd blog_of_everything
+cd Blog-app
 ```
 - Install bundles
 
