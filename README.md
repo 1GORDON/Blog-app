@@ -4,12 +4,11 @@
 
 In this project, I achieved the following;
 
-- Created a new app Blog-app.
-- Initialized my project with Git.
-- My project has Postgres database set up.
-- Created routes.
-- Created actions in the correct controllers.
-- Created view files and these view files include placeholders written in plain HTML.
+- Added RSpec as a gem to my Blog-app project.
+- Created a Request spec file for all my controllers.
+- Made sure a response status was correct.
+- Made sure a correct template was rendered.
+- Made sure the response body includes a correct placeholder text.
 
 ## Built With
 
