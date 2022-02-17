@@ -1,8 +1,15 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Blog-of-everything
+# Blog-app
 
-> This is the Ruby on Rails application, in this project I will create a blog with ruby on rails with Postgresql database.
+In this project, I achieved the following;
+
+- Created a new app Blog-app.
+- Initialized my project with Git.
+- My project has Postgres database set up.
+- Created routes.
+- Created actions in the correct controllers.
+- Created view files and these view files include placeholders written in plain HTML.
 
 ## Built With
 
@@ -18,7 +25,7 @@ To get a local copy up and running follow these simple example steps.
 - Copy Repo Link
 
 ```
-https://github.com/adamteddychang/blog_of_everything.git
+https://github.com/1GORDON/Blog-app.git
 ```
 - Get the directory that you want to clone the repository.
 
@@ -27,7 +34,7 @@ https://github.com/adamteddychang/blog_of_everything.git
 - Copy clone of the Repo
 
 ```
-git clone https://github.com/adamteddychang/blog_of_everything.git
+git clone https://github.com/1GORDON/Blog-app.git
 ```
 
 - Go to the repository folder in your command prompt.
@@ -53,11 +60,11 @@ bundle install
 - Postgresql
 ## Authors
 
-👤 **You-Wei (Adam) Chang** 
+👤 **Tinyefuza (Godanah) Gordon** 
 
-- GitHub: [@adamteddychang](https://github.com/adamteddychang)
-- Twitter: [@AdamChang3](https://twitter.com/AdamChang3) 
-- LinkedIn: [You-Wei(Adam) Chang](https://www.linkedin.com/in/adamteddychang/)
+- GitHub: [IGORDON](https://github.com/1GORDON)
+- Twitter: [@TinyefuzaG](https://twitter.com/GTinyefuza) 
+- LinkedIn: [Tinyefuza-Gordon) Chang](https://www.linkedin.com/in/tinyefuza-gordon/)
 
 
 
@@ -74,8 +81,4 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- This project built in Microverse's Fourth Module's Capstone.
-
-## 📝 License
-
-This project is [MIT](./MIT.md) licensed.
+- This project built in Microverse's FIFth Module.
