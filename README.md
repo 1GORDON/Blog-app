@@ -4,11 +4,11 @@
 
 In this project, I achieved the following;
 
-- Added RSpec as a gem to my Blog-app project.
-- Created a Request spec file for all my controllers.
-- Made sure a response status was correct.
-- Made sure a correct template was rendered.
-- Made sure the response body includes a correct placeholder text.
+- Built my project schema file.
+- Created and run the necessary migration files.
+- Ensured the table and column names match the ERD diagram.
+- Foreign keys should were included.
+- All coulms that are foreign keys have a corresponding index.
 
 ## Built With
 
