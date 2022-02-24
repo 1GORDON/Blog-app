@@ -6,6 +6,7 @@ AllCops:
     - "node_modules/**/*"
     - 'bin/*'
     - db/schema.rb
+    - test/test_helper.rb
 
   DisplayCopNames: true
 
