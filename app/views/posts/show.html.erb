@@ -1,3 +1,32 @@
-<h1>Posts#show</h1>
-<h1>Here is a display of a given post for a given user</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+<div class='post-details-body'>
+    <div class='post-details-p-card'>
+        <div class='post-details-top'>
+            <h3>
+                <%= @post.title %> by <%= @post.user.name %>
+            </h3>
+
+            <div class='post-com-lik-counters'>
+                <p>
+                    Comments: <%= @post.comments_counter%>
+                </p>
+                <p>
+                    Likes: <%= @post.likes_counter%>
+                </p>
+            </div>
+        </div>
+
+        <p class='post-details-text'>
+            <%= @post.text %>
+        </p>
+    </div>
+
+    <div class='post-details-p-comments'>
+        <% @comments.each do |comment| %>
+            <p>
+                <%= comment.user.name%>: <%= comment.text%>
+            </p>
+        <% end %>
+    </div>
+
+
+</div>
