@@ -1,14 +1,22 @@
-<% @users.each do |user| %>
-    <div class='u-card'>
-        <div class='u-img'>
-            <%= image_tag 'image-placeholder.png', width:'150px', height:'150px' %>
-        </div>
-        <div class ='u-name-counter-col'>
-            <%= link_to user_path(user.id) do %>
-                <h1 class='user-name'><%= user.name %></h1>
-            <% end %>
-            <p class='u-posts-counter'>Number of posts: <%=  user.posts_counter  %></p>     
-        </div>    
-    </div>   
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BlogApp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
 
-<%end%>
+  <body>
+
+    <% @users.each do |user| %>
+    <%= link_to user_path(user), :remote => true do %>
+    <%= render "partials/user", user: user %>
+    
+    <% end %>
+    <% end %>
+
+  </body>
+</html>

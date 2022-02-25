@@ -4,10 +4,9 @@
 
 In this project, I achieved the following;
 
-- Added the Views associated with the Models and Controllers
-- Added Styling
-- Used methods that you have created.
-- Added some data to my database in order to see some posts or comments.
+- Created a Post on behalf of the current_user.
+- Created a comment on behalf of the current_user.
+- Allowed Users to add likes to Posts.
 
 ## Built With
 
