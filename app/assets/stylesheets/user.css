@@ -21,7 +21,7 @@ body {
 }
 
 .user-name {
-margin-left: 30px;
+  margin-left: 30px;
 }
 
 .u-posts-counter {
@@ -75,7 +75,7 @@ margin-left: 30px;
 }
 
 .all-posts-btn {
-width: 150px;
-margin: auto;
-text-decoration: none;
+  width: 150px;
+  margin: auto;
+  text-decoration: none;
 }
