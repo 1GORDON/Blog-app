@@ -7,7 +7,7 @@ In this project, I achieved the following;
 - Added the Views associated with the Models and Controllers
 - Added Styling
 - Used methods that you have created.
-- Added some data to my databasein order see some posts or comments.
+- Added some data to my database in order to see some posts or comments.
 
 ## Built With
 
