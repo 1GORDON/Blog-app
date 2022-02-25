@@ -4,18 +4,10 @@
 
 In this project, I achieved the following;
 
-- Created model classes for all entities as shown in the ERD diagram.
-- Set up associations between models.
-- Created at least two users
-- Created at least 4 posts written by one of the users
-- Created at least 6 posts comments for one of the posts
-- Used other CRUD methods to find, update and delete entities.
-- Added a method that returns the 3 most recent posts for a given user.
-- Added a method that updates the posts counter for a user.
-- Added a method which returns the 5 most recent comments for a given post.
-- Added a method that updates the comments counter for a post.
-- Added a method that updates the likes counter for a post.
-- Created a method called current_user in my ApplicationController
+- Added the Views associated with the Models and Controllers
+- Added Styling
+- Used methods that you have created.
+- Added some data to my database in order to see some posts or comments.
 
 ## Built With
 

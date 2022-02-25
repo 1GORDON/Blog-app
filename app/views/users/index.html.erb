@@ -1,3 +1,14 @@
-<h1>Users#index</h1>
-<h1>Here is a list of a given user</h1>
-<p>Find me in app/views/users/index.html.erb</p>
+<% @users.each do |user| %>
+    <div class='u-card'>
+        <div class='u-img'>
+            <%= image_tag 'image-placeholder.png', width:'150px', height:'150px' %>
+        </div>
+        <div class ='u-name-counter-col'>
+            <%= link_to user_path(user.id) do %>
+                <h1 class='user-name'><%= user.name %></h1>
+            <% end %>
+            <p class='u-posts-counter'>Number of posts: <%=  user.posts_counter  %></p>     
+        </div>    
+    </div>   
+
+<%end%>
