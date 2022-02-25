@@ -1,15 +1,15 @@
-class LikesController < ApplicationController
+class LikesController < ActionController::Base
     def create
-      @post = Post.find(params[:post_id])
-      new_like = current_user.likes.new(
-        user_id: current_user.id,
-        post_id: @post.id
-      )
-      new_like.update_likes_counter
-      if new_like.save
-        redirect_to "/users/#{@post.user_id}/posts/#{@post.id}", notice: 'Success!'
+      post = Post.find(params[:post_id])
+      user = User.find(params[:user_id])
+      like = Like.new(post: post, author: user)
+      if like.save
+        Like.count_likes(post.id)
+        flash[:success] = 'Your comment has been added!'
+        redirect_to user_post_path(user.id, post.id)
       else
-        render :new, alert: 'Error occured!'
+        flash.now[:error] = 'Comment could not be added'
+        render user_post_path
       end
     end
   end

@@ -1,30 +1,37 @@
-class PostsController < ApplicationController
+class PostsController < ActionController::Base
   def index
-    @user = User.find(params[:user_id])
-    @posts = @user.posts
+    @id = params[:user_id]
+    @user = User.find(@id)
+    @posts = User.all_post(@id)
   end
 
   def show
     @post = Post.find(params[:id])
-    @user = @post.user
-    @comments = @post.comments
+    @user = User.find(params[:user_id])
+    @comment = Comment.new
+    @like = Like.new
   end
 
   def new
-    @post = Post.new
+    @user = User.find(params[:user_id])
+    @post = @user.posts.new
+    render :new, locals: { post: @post }
   end
 
   def create
-    new_post = current_user.posts.new(post_params)
-    new_post.likes_counter = 0
-    new_post.comments_counter = 0
-    new_post.update_posts_counter
+    @user = User.find(params[:user_id])
+    add_post = @user.posts.new(post_params)
+    add_post.commentsCounter = 0
+    add_post.likesCounter = 0
     respond_to do |format|
       format.html do
-        if new_post.save
-          redirect_to "/users/#{new_post.user.id}/posts/", notice: 'Success!'
+        if add_post.save
+          Post.count_post(params[:user_id])
+          flash[:success] = 'Post created successfully'
+          redirect_to user_posts_url
         else
-          render :new, alert: 'Error occured!'
+          flash.now[:error] = 'Error: Post could not be created'
+          render :new, locals: { post: add_post }
         end
       end
     end
@@ -33,6 +40,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:data).permit(:title, :text)
+    params.require(:post).permit(:title, :text)
   end
 end

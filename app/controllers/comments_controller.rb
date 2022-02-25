@@ -1,22 +1,21 @@
-class CommentsController < ApplicationController
+class CommentsController < ActionController::Base
     def create
-      @post = Post.find(params[:post_id])
-      new_comment = current_user.comments.new(
-        text: comment_params,
-        user_id: current_user.id,
-        post_id: @post.id
-      )
-      new_comment.update_comments_counter
-      if new_comment.save
-        redirect_to "/users/#{@post.user_id}/posts/#{@post.id}", notice: 'Success!'
+      post = Post.find(params[:post_id])
+      user = User.find(params[:user_id])
+      comment = Comment.new(post: post, author: user, text: comment_params['text'])
+      if comment.save
+        Comment.count_comments(post.id)
+        flash[:success] = 'Your comment has been added!'
+        redirect_to user_post_path(user.id, post.id)
       else
-        render :new, alert: 'Error occured!'
+        flash.now[:error] = 'Comment could not be added'
+        render user_post_path
       end
     end
   
     private
   
     def comment_params
-      params.require(:comment).permit(:text)[:text]
+      params.require(:comment).permit(:text)
     end
   end
