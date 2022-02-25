@@ -88,6 +88,10 @@ RSpec.configure do |config|
   #   #     --seed 1234
   #   config.order = :random
   #
+  if Bullet.enable?
+    config.before(:each) { Bullet.start_request }
+    config.after(:each)  { Bullet.end_request }
+  end
   #   # Seed global randomization in this process using the `--seed` CLI option.
   #   # Setting this allows you to use `--seed` to deterministically reproduce
   #   # test failures related to randomization by passing the same `--seed` value
