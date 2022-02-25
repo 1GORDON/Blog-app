@@ -1,6 +1,0 @@
-<%= form_with url: "/posts/#{@post.id}/comments", scope: :comment do |form| %>
-    <div class='comment-form-container'>
-        <%= form.text_area :text, placeholder: 'Enter comment here', rows: 10, required: true %>
-        <%= form.submit 'Enter Comment', class: 'submit-btn' %>
-    </div>
-<% end %>
