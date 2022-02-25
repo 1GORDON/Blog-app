@@ -4,7 +4,7 @@ class Like < ApplicationRecord
 
   def self.count_likes(id)
     post = Post.find(id)
-    post.likesCounter = Like.where(post_id: id).count
+    post.likes_counter = Like.where(post_id: id).count
     post.save
   end
 end

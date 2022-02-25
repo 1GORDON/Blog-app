@@ -13,7 +13,7 @@ class Post < ApplicationRecord
 
   def self.count_post(id)
     user = User.find(id)
-    user.postsCounter = Post.where(user_id: id).count
+    user.posts_counter = Post.where(user_id: id).count
     user.save
   end
 end

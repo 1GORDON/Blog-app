@@ -4,7 +4,7 @@ class Comment < ApplicationRecord
 
   def self.count_comments(id)
     post = Post.find(id)
-    post.commentsCounter = Comment.where(post_id: id).count
+    post.comments_counter = Comment.where(post_id: id).count
     post.save
   end
 end
