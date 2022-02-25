@@ -7,6 +7,7 @@ AllCops:
     - 'bin/*'
     - db/schema.rb
     - test/test_helper.rb
+    - routes.rb
 
   DisplayCopNames: true
 
