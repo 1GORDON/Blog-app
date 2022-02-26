@@ -6,23 +6,31 @@ RSpec.describe Post, type: :model do
 
   before { subject.save }
 
-  it 'Title should be present' do
+  it 'title should be present' do
     subject.title = nil
     expect(subject).to_not be_valid
   end
 
-  it 'Title should not be too long' do
+  it 'title should not be too long' do
     subject.title = 'a' * 251
     expect(subject).to_not be_valid
   end
 
-  it 'Comments counter should be greater than or equal to zero' do
-    subject.comments_counter = -1
+  it 'commentsCounter should be greater than or equal to zero' do
+    subject.commentsCounter = -1
     expect(subject).to_not be_valid
   end
 
-  it 'Likes counter should be greater than or equal to zero' do
-    subject.likes_counter = -1
+  it 'likesCounter should be greater than or equal to zero' do
+    subject.likesCounter = -1
     expect(subject).to_not be_valid
+  end
+
+  it 'return the recent comments for a post' do
+    expect(Post.recent_comments(subject.id).count).to eql 0
+  end
+
+  it 'return all the comments for a post' do
+    expect(Post.all_comments(subject.id).count).to eql 0
   end
 end
