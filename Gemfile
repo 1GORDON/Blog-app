@@ -7,7 +7,7 @@ gem 'ffi'
 
 gem 'bootstrap', '~> 5.1.3'
 
-gem "bullet"
+gem 'bullet'
 
 gem 'rails-controller-testing'
 
