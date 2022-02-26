@@ -4,9 +4,11 @@
 
 In this project, I achieved the following;
 
-- Created a Post on behalf of the current_user.
-- Created a comment on behalf of the current_user.
-- Allowed Users to add likes to Posts.
+- Added the validations for the User model.
+- Added the validations for the Post model.
+- Added unit specs for all of your models methods and validations.
+- Added flash messages in the create actions in all my controllers.
+- Made sure that the N+1 problem is solved when fetching all posts and their comments for a user.
 
 ## Built With
 
