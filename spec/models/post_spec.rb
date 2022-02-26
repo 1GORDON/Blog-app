@@ -6,23 +6,23 @@ RSpec.describe Post, type: :model do
 
   before { subject.save }
 
-  it 'title should be present' do
+  it 'Title should be present' do
     subject.title = nil
     expect(subject).to_not be_valid
   end
 
-  it 'title should not be too long' do
+  it 'Title should not be too long' do
     subject.title = 'a' * 251
     expect(subject).to_not be_valid
   end
 
-  it 'commentsCounter should be greater than or equal to zero' do
-    subject.commentsCounter = -1
+  it 'Comments counter should be greater than or equal to zero' do
+    subject.comments_counter = -1
     expect(subject).to_not be_valid
   end
 
-  it 'likesCounter should be greater than or equal to zero' do
-    subject.likesCounter = -1
+  it 'Likes counter should be greater than or equal to zero' do
+    subject.likes_counter = -1
     expect(subject).to_not be_valid
   end
 end
