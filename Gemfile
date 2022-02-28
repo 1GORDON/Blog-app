@@ -5,6 +5,8 @@ ruby '3.0.3'
 
 gem 'ffi'
 
+gem 'devise'
+
 gem 'bootstrap', '~> 5.1.3'
 
 gem 'bullet'
