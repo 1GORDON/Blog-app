@@ -4,11 +4,13 @@
 
 In this project, I achieved the following;
 
-- Added the validations for the User model.
-- Added the validations for the Post model.
-- Added unit specs for all of your models methods and validations.
-- Added flash messages in the create actions in all my controllers.
-- Made sure that the N+1 problem is solved when fetching all posts and their comments for a user.
+- Removed current_user method in ApplicationController.
+- Installed and setup devise.
+- Can register a new user.
+- User logs in with a combination of email and password.
+- Hashed password can be stored in the database.
+- Can ask for confirmation of email.
+- Can reset password.
 
 ## Built With
 
