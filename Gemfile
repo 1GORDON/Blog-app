@@ -7,10 +7,6 @@ gem 'ffi'
 
 gem 'devise'
 
-gem 'capybara'
-
-gem 'webdrivers'
-
 gem 'bootstrap', '~> 5.1.3'
 
 gem 'bullet'
@@ -67,8 +63,13 @@ gem 'bootsnap', require: false
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-   gem 'database_cleaner'
   gem 'debug', platforms: %i[mri mingw x64_mingw]
+
+  gem 'database_cleaner'
+
+  gem 'capybara'
+
+  gem 'webdrivers'
 end
 
 group :test do
