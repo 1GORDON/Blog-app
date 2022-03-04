@@ -7,6 +7,10 @@ gem 'ffi'
 
 gem 'devise'
 
+gem 'capybara'
+
+gem 'webdrivers'
+
 gem 'bootstrap', '~> 5.1.3'
 
 gem 'bullet'
