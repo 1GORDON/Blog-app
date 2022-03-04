@@ -5,6 +5,8 @@ ruby '3.1.0'
 
 gem 'ffi'
 
+gem 'devise'
+
 gem 'bootstrap', '~> 5.1.3'
 
 gem 'bullet'
@@ -19,6 +21,7 @@ gem 'sprockets-rails'
 
 # Use sqlite3 as the database for Active Record
 gem 'pg'
+
 gem 'sqlite3', '~> 1.4'
 
 # Use the Puma web server [https://github.com/puma/puma]
