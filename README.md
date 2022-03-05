@@ -4,13 +4,12 @@
 
 In this project, I achieved the following;
 
-- Removed current_user method in ApplicationController.
-- Installed and setup devise.
-- Can register a new user.
-- User logs in with a combination of email and password.
-- Hashed password can be stored in the database.
-- Can ask for confirmation of email.
-- Can reset password.
+- Installed Capybara
+- Wrote integration tests for the Login page.
+- Wrote integration tests for the User index page.
+- Wrote integration tests for the user show page.
+- Wrote integration tests for the User post index page.
+- Wrote integration tests for the Post show page.
 
 ## Built With
 
