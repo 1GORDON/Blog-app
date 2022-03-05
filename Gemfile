@@ -7,6 +7,8 @@ gem 'ffi'
 
 gem 'devise'
 
+gem 'rswag'
+
 gem 'bootstrap', '~> 5.1.3'
 
 gem 'bullet'
