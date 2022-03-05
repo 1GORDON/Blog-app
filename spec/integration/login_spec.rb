@@ -26,8 +26,8 @@ RSpec.describe 'Login features', js: true do
 
   it 'Should redirected to the root page when clicking submit button with correct data' do
     visit('/users/sign_in')
-    fill_in('Email', with: 'mel@mail.com')
-    fill_in('Password', with: 'r89eudhbgvb')
+    fill_in('Email', with: 'justin@mail.com')
+    fill_in('Password', with: '000000')
     click_button('Log in')
     expect(current_path).to have_content('/users')
   end
