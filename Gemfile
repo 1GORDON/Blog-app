@@ -7,6 +7,14 @@ gem 'ffi'
 
 gem 'devise'
 
+gem 'rswag'
+
+# gem 'jbuilder', '~> 2.7'
+
+gem 'jsonapi-rails'
+
+gem 'devise-jwt', '~> 0.7.0'
+
 gem 'bootstrap', '~> 5.1.3'
 
 gem 'bullet'
