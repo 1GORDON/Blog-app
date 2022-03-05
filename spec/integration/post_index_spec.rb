@@ -48,11 +48,7 @@ RSpec.describe 'Post Index', type: :feature do
     end
 
     it 'can see some of the body for the post.' do
-      expect(page).to have_content 'test text 1'
-    end
-
-    it 'can see the first comments on a post' do
-      expect(page).to have_no_content 'This Kingsley post'
+      expect(page).to have_content('test text 1')
     end
 
     it 'can see how many comments a post has.' do
