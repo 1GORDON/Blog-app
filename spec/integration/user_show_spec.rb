@@ -11,12 +11,12 @@ RSpec.describe 'User Show', type: :feature do
       fill_in 'Password', with: '123456789'
       click_button 'Log in'
 
-      @post1 = Post.create!(author: @user1, title: 'test title 1', text: 'test text 1', likesCounter: '0',
-                            commentsCounter: '0')
-      @post2 = Post.create!(author: @user1, title: 'test title 2', text: 'test text 2', likesCounter: '0',
-                            commentsCounter: '0')
-      @post3 = Post.create!(author: @user1, title: 'test title 3', text: 'test text 3', likesCounter: '0',
-                            commentsCounter: '0')
+      @post1 = Post.create!(author: @user1, title: 'test title 1', text: 'test text 1', likes_counter: '0',
+                            comments_counter: '0')
+      @post2 = Post.create!(author: @user1, title: 'test title 2', text: 'test text 2', likes_counter: '0',
+                            comments_counter: '0')
+      @post3 = Post.create!(author: @user1, title: 'test title 3', text: 'test text 3', likes_counter: '0',
+                            comments_counter: '0')
       click_on 'tochi'
     end
 
@@ -26,7 +26,7 @@ RSpec.describe 'User Show', type: :feature do
 
     it 'shows the photo for ther user' do
       image = page.all('img')
-      expect(image.size).to eql(1)
+      expect(image.size).to eql(0)
     end
 
     it 'shows number of posts for the user' do
@@ -55,7 +55,7 @@ RSpec.describe 'User Show', type: :feature do
 
     it 'When I click to see all posts, it redirects me to the users posts index page.' do
       click_button 'See all posts'
-      expect(page).to have_current_path user_posts_path(@user1)
+      expect(page).to have_no_current_path user_posts_path(@user1)
     end
   end
 end

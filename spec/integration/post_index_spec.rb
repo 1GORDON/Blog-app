@@ -63,9 +63,9 @@ RSpec.describe 'Post Index', type: :feature do
       expect(page).to have_content('Likes: 1')
     end
 
-    # it 'When I click on a post, it redirects me to the show page for the post.' do
-    #   click_link 'test title 1'
-    #   expect(page).to have_no_current_path user_post_path(@user1.id, @post1.id)
-    # end
+    it 'When I click on a post, it redirects me to the show page for the post.' do
+      click_link 'test title 1'
+      expect(page).to have_current_path user_post_path(@user1.id, @post1.id)
+    end
   end
 end
