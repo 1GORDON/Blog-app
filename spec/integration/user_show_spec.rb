@@ -52,6 +52,5 @@ RSpec.describe 'User Show', type: :feature do
       click_link 'test title 1'
       expect(page).to have_current_path user_post_path(@user1, @post1)
     end
-
   end
 end
